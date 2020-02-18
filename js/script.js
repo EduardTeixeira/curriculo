@@ -2,29 +2,17 @@ function calculateAge(day, month, year) {
 
     var birthday = new Date(year, month - 1, day);
 
-    console.log('birthday....')
-    console.log(birthday)
-    console.log('day.... ' + birthday.getDate())
-    console.log('month.... ' + birthday.getMonth())
-    console.log('year.... ' + birthday.getFullYear())
-
     var now = new Date;
-
-    console.log('now....')
-    console.log(now)
-    console.log('day.... ' + now.getDate());
-    console.log('month.... ' + now.getMonth());
-    console.log('year.... ' + now.getFullYear());
 
     var years = now.getFullYear() - birthday.getFullYear();
 
-    if (birthday.getMonth() <= now.getMonth()) {
+    if (now.getMonth() < birthday.getMonth()) {
 
-        console.log("MES MENOS....")
+        years--;
 
-        if (birthday.getDate() > now.getDate()) {
+    } else if (now.getMonth() == birthday.getMonth()) {
 
-            console.log("DIA MENOS...")
+        if (now.getDate() < birthday.getDate()) {
 
             years--;
 
@@ -32,10 +20,5 @@ function calculateAge(day, month, year) {
 
     }
 
-    console.log("years...")
-    console.log(years)
-
-    var spanYears = document.getElementById("years");
-
-    spanYears.innerHTML = years;
+    document.getElementById("years").innerHTML = years;
 }

@@ -1,4 +1,4 @@
-# curriculo
+# Currículo
 
 Meu currículo, com informações para contato e pessoais, assim como área de interesse, formações acadêmicas e histórico profissional.
 

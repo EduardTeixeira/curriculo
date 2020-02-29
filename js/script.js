@@ -22,3 +22,7 @@ function calculateAge(day, month, year) {
 
     document.getElementById("years").innerHTML = years;
 }
+
+function callIndex() {
+    window.location = 'https://eduardteixeira.github.io/curriculo/html/index.html'
+}
